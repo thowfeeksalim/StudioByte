@@ -1,0 +1,38 @@
+{%extends 'base.html'%}
+
+{% block title%}
+Department
+{%endblock%}
+
+{% block contend%}
+
+<style >
+    
+    .dept-bg {
+      background-image: url('../static/images/l_series_promo_product_1280_937e1fe871044d8991200ba1de5dc2d0.jpg');
+      background-size: cover;
+      background-position: center center;
+    }
+    h1 {
+      color: rgb(237, 232, 232);
+      font-family: Papyrus;
+    }
+    p {
+      color: rgb(254, 251, 251);
+      font-family: Papyrus;
+    }
+  </style>
+  
+  <h1 class="text-center">OUR DEPARTMENTS</h1>
+  <hr>
+  {% for d in dept%}
+  
+  <div class=  "mx-auto w-50 bg-success text-center text-white p-3 my-5 border border-warning rounded dept-bg">
+        
+        <h1>{{d.dep_name}}</h1>
+        <p>{{d.dep_description}}</p>
+        
+  </div>          
+  {% endfor %}
+  
+{%endblock%}

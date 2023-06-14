@@ -1,0 +1,40 @@
+{%extends 'base.html'%}
+
+{% block title%}
+OUR WORKS
+{%endblock%}
+
+{% block contend%}
+
+<h1 class="text-center" style="color: antiquewhite;font-family: 'papyrus';"> OUR WORKS
+
+</h1>
+<hr>
+<div class="container text-center bg-dark">
+ 
+     
+      {% for d in occations%}
+      
+
+      <div class="card text-center mx-10 my-3" style="width: 70rem; display: inline-block">
+        
+          <img src="{{d.occ_image.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                
+                <h5 class="card-title"style="font-family: 'papyrus';">{{d.occ_name}}</h5>
+                
+                <p class="card-text"style="font-family: 'papyrus';">{{d.occ_spec}}</p>
+                <p></p>
+
+                
+               
+         
+            </div>
+       </div>
+       
+      {% endfor %}
+</div>
+
+ 
+
+{% endblock %}
